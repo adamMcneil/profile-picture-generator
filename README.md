@@ -1,7 +1,9 @@
 # profile-picture-generator
-This is a java program to produce a profile picture like github's default profile picture.
-
-controls
+This is a java program to produce a profile picture like github's default profile picture. <br>
+<br>
+Command to run: ./run.sh (may need to use chmod +x run.sh) <br>
+<br>
+controls <br>
 r - load new picture <br>
 s - save the current picture you are looking at to working directory <br>
 1-7 - change the primary color <br>
