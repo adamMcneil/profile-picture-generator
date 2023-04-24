@@ -187,7 +187,32 @@ class Drawing extends Canvas {
     }
 
     public static ProfilePicture makeProfilePicture() {
-        return new ProfilePicture(canvasSize / boxSize, boxSize, green, Color.WHITE);
+        return new ProfilePicture(canvasSize / boxSize, boxSize, randomColor(), Color.WHITE);
+    }
+
+    public static Color randomColor() {
+        Random random = new Random();
+        int randomInt = random.nextInt(6) + 1;
+        if (randomInt == 1) {
+            return red;
+        }
+        if (randomInt == 2) {
+            return orange;
+        }
+        if (randomInt == 3) {
+            return yellow;
+        }
+        if (randomInt == 4) {
+            return green;
+        }
+        if (randomInt == 5) {
+            return blue;
+        }
+        if (randomInt == 6) {
+            return purple;
+        }
+        System.out.println("We have a large problem");
+        return Color.WHITE;
     }
 
     public void exportImage(String imageName) {
