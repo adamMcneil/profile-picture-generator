@@ -1,2 +1,2 @@
-javac main.java
+javac -d . *.java
 java Drawing
