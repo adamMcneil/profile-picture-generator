@@ -23,14 +23,14 @@ class Drawing extends Canvas {
     static int canvasSize = 700;
     static int boxSize = 100;
     static String option;
-    static Color yellow = new Color(247, 249, 195);
-    static Color blue = new Color(195, 197, 249);
-    static Color red = new Color(249, 195, 197);
-    static Color pink = new Color(249, 195, 247);
-    static Color purple = new Color(233,195,249);
-    static Color teal = new Color(195, 249, 242);
-    static Color green = new Color(197, 249, 195);
-    static Color orange = new Color(249, 231,195);
+    static Color yellow = new Color(252, 247, 200);
+    static Color blue = new Color(200, 210, 255);
+    static Color red = new Color(255, 200, 200);
+    static Color pink = new Color(255, 200, 230);
+    static Color purple = new Color(225, 200, 255);
+    static Color teal = new Color(200, 255, 235);
+    static Color green = new Color(210, 255, 200);
+    static Color orange = new Color(255, 225, 200);
 
     static ArrayList<ProfilePicture> profilePicturesList = new ArrayList<ProfilePicture>();
     static int memoryLength = 15;
