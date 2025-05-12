@@ -55,7 +55,7 @@ class Drawing extends Canvas {
             @Override
             public void keyTyped(KeyEvent e) {
             }
-    
+
             @Override
             public void keyPressed(KeyEvent e) {
                 System.out.println("Key pressed code=" + e.getKeyCode() + ", char=" + e.getKeyChar());
@@ -148,27 +148,25 @@ class Drawing extends Canvas {
                 }
                 // 37- 40 arrow keys
             }
-    
+
             @Override
             public void keyReleased(KeyEvent e) {
             }
         });
     }
 
- 
-
     public void paint(Graphics g) {
         g.setColor(profilePicturesList.get(currentProfilePictureIndex).backgroundColor);
         g.fillRect(0, 0, canvasSize, canvasSize);
-        
+
         g.setColor(profilePicturesList.get(currentProfilePictureIndex).primaryColor);
-        
+
         Random random = new Random();
         int numberOfBoxes = canvasSize / boxSize;
         for (int x = 0; x < numberOfBoxes; x++) {
             for (int y = 0; y < numberOfBoxes; y++) {
                 if (profilePicturesList.get(currentProfilePictureIndex).map[x][y]) {
-                    g.fillRect(x*boxSize, y*boxSize, boxSize, boxSize);
+                    g.fillRect(x * boxSize, y * boxSize, boxSize, boxSize);
                 }
             }
         }
@@ -179,10 +177,9 @@ class Drawing extends Canvas {
             profilePicturesList.add(profilePicturesList.size(), makeProfilePicture());
             profilePicturesList.remove(0);
             currentProfilePictureIndex = memoryLength;
-        }
-        else {
+        } else {
             profilePicturesList.add(profilePicturesList.size(), makeProfilePicture());
-            currentProfilePictureIndex = profilePicturesList.size()-1;
+            currentProfilePictureIndex = profilePicturesList.size() - 1;
         }
     }
 
@@ -216,7 +213,7 @@ class Drawing extends Canvas {
     }
 
     public void exportImage(String imageName) {
-        BufferedImage image = new  BufferedImage(canvasSize, canvasSize, BufferedImage.TYPE_INT_RGB);
+        BufferedImage image = new BufferedImage(canvasSize, canvasSize, BufferedImage.TYPE_INT_RGB);
         Graphics2D graphics = image.createGraphics();
         paint(graphics);
         graphics.dispose();
@@ -229,6 +226,6 @@ class Drawing extends Canvas {
             e.printStackTrace();
         } catch (IOException e) {
             e.printStackTrace();
-        }    
+        }
     }
 }
